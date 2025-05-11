@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Primeiros passos com DOM</title>
+  <style>
+    body {
+      background: rgb(113, 142, 238);
+      color: white;
+      font: normal 18pt Arial;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Iniciando estudos com DOM</h1>
+  <p>Aqui vai o resultado</p>
+  <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+  <div id="msg">Clique em mim</div>
+  <script>
+    // window.document.write("Olá, Mundo!");
+    // window.document.write(window.document.charset);
+    // window.document.write(window.navigator.appName);
+    // window.document.write(window.document.URL); //Acesso a diversos componentes utilizando o DOM, dentro do JS.
+
+    var p1 = window.document.getElementsByTagName('p')[0];
+    var p2 = window.document.getElementsByTagName('p')[1];
+    var d = window.document.getElementById('msg');
+    // window.document.write('No primeiro parágrafo está escrito assim: ' + p1.innerText);
+    // var corpo = window.document.body;
+    // corpo.style.background = 'black';
+    p1.style.color = 'blue';
+
+    window.document.write('No segundo parágrafo está escrito assim: ' + p2.innerHTML);
+    // window.alert(p1.innerText); //innerText pega o texto sem a formatação.
+    d.style.background = 'green';
+
+    // window.document.getElementById('msg').innerText = 'Olá';
+    // d.innerText = 'Estou aguardando';
+
+    var d = window.document.querySelector('div#msg'); //div é representada por #, e classe por .
+    d.style.background = 'blue';
+
+  </script>
+</body>
+
+</html>

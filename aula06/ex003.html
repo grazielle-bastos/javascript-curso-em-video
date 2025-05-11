@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=
+  , initial-scale=1.0">
+  <title>Meu programa em Javascript...</title>
+  <style>
+    body {
+      background-color: rgb(127, 127, 197);
+      color: white;
+      font: normal 20pt Arial;
+    }
+
+    h1 {
+      color: rgba(255, 255, 0, 0.877);
+    }
+
+    /* Comentário em CSS */
+  </style>
+</head>
+
+<body>
+  <h1>Olá, mundo!</h1>
+  <p>Já me livrei da maldição!</p> <!--Comentário em HTML-->
+  <script>
+    let n1 = Number.parseFloat(window.prompt(`Digite um número: `)); //Recebe um valor string por padrão, precisa ser feito uma conversão de tipo string para número
+    let n2 = Number.parseFloat(window.prompt(`Digite outro número: `)); //Recebe um valor string por padrão, precisa ser feito uma conversão de tipo string para número
+    let s = n1 + n2;
+    //window.alert(`A soma dos valores é ` + String(s)); //Concatenação
+    //(number + number) para adição
+    //(string + string) para concatenação
+    window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`);
+  </script>
+</body>
+
+</html>

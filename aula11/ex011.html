@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nacionalidade</title>
+  <style>
+    body {
+      background-color: rgba(138, 81, 81, 0.356);
+      color: rgb(68, 59, 38);
+      font: normal arial 18px;
+    }
+
+    div {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Checagem de Nacionalidade</h1>
+  Você está vivendo no país: <input type="text" name="pA" id="pA">
+  <input type="button" value="Verificar" onclick="checar()">
+
+  <div id="res">
+
+  </div>
+
+  <script>
+    function checar() {
+      let país = window.document.querySelector('input#pA');
+      let res = window.document.querySelector('div#res');
+
+      let pAtual = país.value;
+      res.innerHTML = `<p>Você informou que vive em: ${pAtual} </p>`;
+
+      if (pAtual == 'Brasil') {
+        res.innerHTML += `Então você é <strong>brasileiro</strong>`;
+      } else {
+        res.innerHTML += `Então você é ,<strong>estrangeiro</strong>`;
+      }
+      res.innerHTML += `<p>Fim do sistema de checagem</p>`;
+
+    }
+  </script>
+</body>
+
+</html>
